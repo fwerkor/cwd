@@ -1,4 +1,5 @@
 include $(TOPDIR)/rules.mk
+include $(INCLUDE_DIR)/package.mk
 
 APP_NAME:=luci
 APP_TITLE:=LuCI
