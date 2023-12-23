@@ -1,9 +1,10 @@
 include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/package.mk
 
-PKG_NAME:=cwd-app-$(notdir ${CURDIR})
-PKG_VERSION:=$(strip $(call findrev))
+PKG_NAME:=cwd-app-$(APP_NAME)
+PKG_VERSION:=$(APP_VERSION)
 PKG_RELEASE?=1
+PKG_DESCRIPTION:=$(APP_DESCRIPTION)
 
 define Package/$(PKG_NAME)
   SECTION:=cwd
@@ -12,6 +13,10 @@ define Package/$(PKG_NAME)
   TITLE:=$(APP_TITLE)
   DEPENDS:=+cwd-core $(APP_DEPENDS)
   PKGARCH:=all
+endef
+
+define Package/$(PKG_NAME)/description
+  $(PKG_DESCRIPTION)
 endef
 
 define Build/Prepare
