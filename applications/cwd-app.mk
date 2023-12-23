@@ -1,5 +1,5 @@
-include ${CURDIR}/../../version.mk
-include ${CURDIR}/../../node.mk
+include ${CURDIR}/../../../version.mk
+include ${CURDIR}/../../../node.mk
 
 PKG_NAME:=cwd-app-$(notdir ${CURDIR})
 PKG_VERSION:=$(strip $(call findrev))
