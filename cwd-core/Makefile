@@ -2,7 +2,7 @@ PKG_NAME:=cwd-core
 PKG_RELEASE:=$(COMMITCOUNT)
 PKG_VERSION:=0.9
 PKG_MAINTAINER:=FWERKOR Team
-
+PKG_ARCH:=all
 PKG_DEPENDS:=+uhttpd +libustream-mbedtls +px5g-mbedtls
 PKG_FILE_DEPENDS:=$(PLATFORM_DIR)/ $(GENERIC_PLATFORM_DIR)/$(PKG_NAME)/
 
@@ -19,6 +19,7 @@ define Package/$(PKG_NAME)
   CATEGORY:=CWD
   TITLE:=$(PKG_NAME)
   DEPENDS:=$(PKG_DEPENDS)
+  PKGARCH:=$(PKG_ARCH)
 endef
 
 define Package/$(PKG_NAME)/description
