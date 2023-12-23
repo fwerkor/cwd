@@ -1,11 +1,9 @@
-include ${CURDIR}/../../../version.mk
-include ${CURDIR}/../../../node.mk
+include $(TOPDIR)/rules.mk
+include $(INCLUDE_DIR)/package.mk
 
 PKG_NAME:=cwd-app-$(notdir ${CURDIR})
 PKG_VERSION:=$(strip $(call findrev))
 PKG_RELEASE?=1
-
-include $(INCLUDE_DIR)/package.mk
 
 define Package/$(PKG_NAME)
   SECTION:=cwd
