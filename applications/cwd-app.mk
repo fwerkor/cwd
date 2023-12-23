@@ -16,6 +16,7 @@ define Package/$(PKG_NAME)
   TITLE:=$(PKG_NAME)
   DEPENDS:=+cwd-core $(APP_DEPENDS)
   PKGARCH:=all
+  VERSION:=$(PKG_VERSION)
 endef
 
 define Package/$(PKG_NAME)/description
