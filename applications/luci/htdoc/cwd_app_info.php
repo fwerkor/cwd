@@ -2,7 +2,7 @@
 
 $app_info = array(
   'name'=>'LuCI',
-  'version'=>'1.0.0',
   'index'=>'index.html',
-  'logo'=>'logo.png'
+  'logo'=>'logo.png',
+  'description'=>'Lua Configuration Interface'
 );
