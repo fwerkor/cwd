@@ -1,7 +1,7 @@
 include ${CURDIR}/../../version.mk
 include ${CURDIR}/../../node.mk
 
-PKG_NAME:=$(notdir ${CURDIR})
+PKG_NAME:=cwd-app-$(notdir ${CURDIR})
 PKG_VERSION:=$(strip $(call findrev))
 PKG_RELEASE?=1
 
@@ -30,7 +30,7 @@ endef
 
 define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $$(1)/cwd/www/cwd/app
-	$(CP) $(PKG_BUILD_DIR)/files/* $$(1)/cwd/www/cwd/app/
+	$(CP) $(PKG_BUILD_DIR)/htdoc/* $$(1)/cwd/www/cwd/app/
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
