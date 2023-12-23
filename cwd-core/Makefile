@@ -34,7 +34,7 @@ endef
 
 define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $$(1)/cwd
-	$(CP) $(PKG_BUILD_DIR)/files/* $$(1)/cwd/
+	$(CP) $(PKG_BUILD_DIR)/../files/* $$(1)/cwd/
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
