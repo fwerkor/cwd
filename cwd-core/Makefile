@@ -4,12 +4,6 @@ PKG_VERSION:=0.9
 PKG_MAINTAINER:=FWERKOR Team
 PKG_ARCH:=all
 PKG_DEPENDS:=+uhttpd +libustream-mbedtls +px5g-mbedtls
-PKG_FILE_DEPENDS:=$(PLATFORM_DIR)/ $(GENERIC_PLATFORM_DIR)/$(PKG_NAME)/
-
-PKG_INSTALL_DIR:=$(PKG_BUILD_DIR)/root-$(ARCH)
-
-PKG_FILES := ../files/*
-PKG_FILE_PATHS:=/cwd
 
 include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/package.mk
@@ -39,8 +33,8 @@ define Build/Compile
 endef
 
 define Package/$(PKG_NAME)/install
-	$(INSTALL_DIR) $$(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/$(PKG_NAME) $$(1)/usr/bin/
+	$(INSTALL_DIR) $$(1)/cwd/www/cwd
+	$(CP) $(PKG_BUILD_DIR)/files/* $$(1)/cwd/
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
