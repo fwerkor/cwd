@@ -13,7 +13,7 @@ define Package/$(PKG_NAME)
   SECTION:=cwd
   CATEGORY:=CWD
   SUBMENU:=Applications
-  TITLE:=$(APP_TITLE)
+  TITLE:=$(APP_NAME)
   DEPENDS:=+cwd-core $(APP_DEPENDS)
   PKGARCH:=all
 endef
