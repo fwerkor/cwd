@@ -12,7 +12,6 @@ PKG_DESCRIPTION:=$(APP_DESCRIPTION)
 define Package/$(PKG_NAME)
   SECTION:=cwd
   CATEGORY:=CWD
-  SUBMENU:=Applications
   TITLE:=$(PKG_NAME)
   DEPENDS:=+cwd-core $(APP_DEPENDS)
   PKGARCH:=all
