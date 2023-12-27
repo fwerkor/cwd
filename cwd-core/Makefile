@@ -6,6 +6,9 @@ PKG_ARCH:=all
 PKG_DEPENDS:=+uhttpd +libustream-mbedtls +px5g-mbedtls
 
 include $(TOPDIR)/rules.mk
+include $(INCLUDE_DIR)/kernel.mk
+include $(INCLUDE_DIR)/version.mk
+include $(INCLUDE_DIR)/feeds.mk
 include $(INCLUDE_DIR)/package.mk
 
 define Package/$(PKG_NAME)
