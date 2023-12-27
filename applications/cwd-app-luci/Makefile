@@ -42,8 +42,8 @@ define Build/Compile
 endef
 
 define Package/$(PKG_NAME)/install
-	$(INSTALL_DIR) $$(1)/cwd/www/cwd/app
-	$(CP) $(PKG_BUILD_DIR)/htdoc/* $$(1)/cwd/www/cwd/app/
+	$(INSTALL_DIR) $$(1)/cwd/www/cwd/app/$(APP_NAME)
+	$(CP) $(PKG_BUILD_DIR)/htdoc/* $$(1)/cwd/www/cwd/app/$(APP_NAME)/
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
