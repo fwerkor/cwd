@@ -11,16 +11,16 @@ include $(INCLUDE_DIR)/feeds.mk
 include $(INCLUDE_DIR)/package.mk
 
 define Package/$(PKG_NAME)
-  SECTION:=cwd
-  CATEGORY:=CWD
-  TITLE:=$(PKG_NAME)
-  DEPENDS:=$(PKG_DEPENDS)
-  PKGARCH:=$(PKG_ARCH)
-  URL:=https://github.com/fwerkor/cwd
+	SECTION:=cwd
+	CATEGORY:=CWD
+	TITLE:=$(PKG_NAME)
+	DEPENDS:=$(PKG_DEPENDS)
+	PKGARCH:=$(PKG_ARCH)
+	URL:=https://github.com/fwerkor/cwd
 endef
 
 define Package/$(PKG_NAME)/description
-  CapOS Web Desktop Core.
+	CapOS Web Desktop Core.
 endef
 
 define Build/Prepare
