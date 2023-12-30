@@ -24,15 +24,9 @@ define Package/$(PKG_NAME)/description
 endef
 
 define Build/Prepare
-	$(call Build/Prepare/Default)
-endef
-
-define Build/Configure
-	$(call Build/Configure/Default)
-endef
-
-define Build/Compile
-	$(call Build/Compile/Default)
+	mkdir -p $(PKG_BUILD_DIR)
+	cp $(SOURCE_DIR)/* $(PKG_BUILD_DIR)
+	$(Build/Patch)
 endef
 
 define Package/$(PKG_NAME)/install
